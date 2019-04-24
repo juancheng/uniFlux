@@ -14,6 +14,7 @@
 <script>
 	import { mapState } from 'vuex'
 	import { loadArticlePages } from '../../states/constants.js'
+	import { asyncReq } from '../../utils/utils.js'
 	
 	export default {
 		data() {
@@ -29,19 +30,16 @@
 		},
 		methods: {
 			asynBtn() {
-				this.$store.dispatch({
-					type: 'asyncReqData',
-					payload: {
-						stateKey: loadArticlePages.key,
-						params: {
-							page: 0,
-							pageSize: 2
-						}
+				asyncReq(this, {
+					stateKey: loadArticlePages.key,
+					params: {
+						page: 0,
+						pageSize: 2
 					}
 				}).then(({props, preProp, prop}) => {
-					console.warn('props:', props)
-					console.warn('preProp', preProp)
-					console.warn('prop', prop)
+					console.warn('preProp:', preProp)
+					console.warn('props,:', props,)
+					console.warn('prop,:', prop,)
 				})
 			},
 		}

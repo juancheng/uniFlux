@@ -42,7 +42,8 @@ const store = new Vuex.Store({
 				headers: payload.headers || api[payload.headers] || '',
 				params: payload.params || api[payload.params] || ''
 			});
-			if(!data) {
+			console.warn('data:', data)
+			if(!data) { // 请求数据异常
 				isLoadStart && commit('saveOrUpdate', {
 					key: payload.stateKey,
 					value: {
@@ -50,8 +51,13 @@ const store = new Vuex.Store({
 						loaded: true
 					}
 				})
-				return
-			} // 请求数据异常
+				return {
+					props: state,
+					preProp: state[payload.stateKey] || '',
+					prop: ''
+				}
+			} 
+			console.warn('data-:', data)
 			// 处理数据
 			const handleData = api[payload.stateKey].handler && api[payload.stateKey].handler({
 				props: state,
