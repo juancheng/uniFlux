@@ -82,17 +82,17 @@ __webpack_require__.r(__webpack_exports__);
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   onLaunch: function onLaunch() {
-    console.log('App Launch');
+    console.log('App Launch', " at App.vue:4");
   },
   onShow: function onShow() {
-    console.log('App Show');
+    console.log('App Show', " at App.vue:7");
   },
   onHide: function onHide() {
-    console.log('App Hide');
+    console.log('App Hide', " at App.vue:10");
   },
   // 捕获 app error
   onError: function onError(err) {
-    console.log(err);
+    console.log(err, " at App.vue:14");
   } };exports.default = _default;
 
 /***/ }),
@@ -109,4 +109,3 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ })
 
 },[["../../../../../workspace/workspace_hb/uniFlux/main.js","common/runtime","common/vendor"]]]);
-//# sourceMappingURL=../../.sourcemap/mp-weixin/common/main.js.map

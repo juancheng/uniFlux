@@ -137,9 +137,9 @@ var _default = { data: function data() {return { title: 'uniFlux' };}, computed:
           pageSize: 2 } }).
 
       then(function (_ref) {var props = _ref.props,preProp = _ref.preProp,prop = _ref.prop;
-        console.warn('preProp:', preProp);
-        console.warn('props,:', props);
-        console.warn('prop,:', prop);
+        console.warn('preProp:', preProp, " at pages\\index\\index.vue:40");
+        console.warn('props,:', props, " at pages\\index\\index.vue:41");
+        console.warn('prop,:', prop, " at pages\\index\\index.vue:42");
       });
     } } };exports.default = _default;
 
@@ -180,4 +180,3 @@ render._withStripped = true
 /***/ })
 
 },[["../../../../../workspace/workspace_hb/uniFlux/main.js?{\"page\":\"pages%2Findex%2Findex\"}","common/runtime","common/vendor"]]]);
-//# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/index/index.js.map

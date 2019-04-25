@@ -25,7 +25,7 @@ var app = new _vue.default(_objectSpread({
 _App.default));
 
 createApp(app).$mount();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createApp"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createApp"]))
 
 /***/ }),
 
@@ -42,7 +42,7 @@ createApp(app).$mount();
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
 var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ "../../../../../workspace/workspace_hb/uniFlux/pages/index/index.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_index.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
@@ -77,9 +77,9 @@ module.exports = _defineProperty({},
 _constants.loadArticlePages.key, {
   url: 'blog/list',
   handler: function handler(_ref) {var props = _ref.props,prop = _ref.prop,resData = _ref.resData;
-    console.warn('props:', props);
-    console.warn('prop:', prop);
-    console.warn('resData:', resData);
+    console.warn('props:', props, " at service\\api.js:12");
+    console.warn('prop:', prop, " at service\\api.js:13");
+    console.warn('resData:', resData, " at service\\api.js:14");
     return resData;
   } });
 
@@ -128,8 +128,8 @@ var store = new _vuex.default.Store({
   state: state,
   mutations: {
     saveOrUpdate: function saveOrUpdate(state, _ref) {var key = _ref.key,value = _ref.value;
-      console.warn('key', key);
-      console.warn('value', value);
+      console.warn('key', key, " at store\\index.js:20");
+      console.warn('value', value, " at store\\index.js:21");
       state[key] = _objectSpread({}, state[key], value);
     } },
 
@@ -138,7 +138,7 @@ var store = new _vuex.default.Store({
     asyncReqData: function () {var _asyncReqData = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref2, _ref3) {var state, commit, payload, isLoadStart, data, handleData, resData;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:state = _ref2.state, commit = _ref2.commit;payload = _ref3.payload;
                 // 处理是否启用接口
                 isLoadStart = (0, _utils.checkIsStartWithLoad)(payload.stateKey);
-                console.warn('isLoadStart:', isLoadStart);
+                console.warn('isLoadStart:', isLoadStart, " at store\\index.js:30");
                 isLoadStart && commit('saveOrUpdate', {
                   key: payload.stateKey,
                   value: {
@@ -153,7 +153,7 @@ var store = new _vuex.default.Store({
                   headers: payload.headers || _api.default[payload.headers] || '',
                   params: payload.params || _api.default[payload.params] || '' });case 7:data = _context.sent;
 
-                console.warn('data:', data);if (
+                console.warn('data:', data, " at store\\index.js:45");if (
                 data) {_context.next = 12;break;} // 请求数据异常
                 isLoadStart && commit('saveOrUpdate', {
                   key: payload.stateKey,
@@ -168,7 +168,7 @@ var store = new _vuex.default.Store({
                   prop: '' });case 12:
 
 
-                console.warn('data-:', data);
+                console.warn('data-:', data, " at store\\index.js:60");
                 // 处理数据
                 handleData = _api.default[payload.stateKey].handler && _api.default[payload.stateKey].handler({
                   props: state,
@@ -196,7 +196,7 @@ var store = new _vuex.default.Store({
                   key: payload.stateKey,
                   value: handleData });
 
-                console.warn("resData", resData);
+                console.warn("resData", resData, " at store\\index.js:88");
                 // 返回后台返回的数据
                 return _context.abrupt("return", resData);case 18:case "end":return _context.stop();}}}, _callee, this);}));function asyncReqData(_x, _x2) {return _asyncReqData.apply(this, arguments);}return asyncReqData;}() } });var _default =
 
@@ -260,7 +260,7 @@ var errorMessages = function errorMessages(res) {return "".concat(res.statusCode
 
 // 校验300
 function check300(res) {
-  console.warn("check300:", res);
+  console.warn("check300:", res, " at utils\\request.js:14");
   if (res.statusCode >= 300 & res.statusCode < 400) {
     return Promise.reject(errorMessages(res));
   }
@@ -269,7 +269,7 @@ function check300(res) {
 
 // 校验400
 function check400(res) {
-  console.warn("check400:", res);
+  console.warn("check400:", res, " at utils\\request.js:23");
   if (res.statusCode >= 400 && res.statusCode < 500) {
     return Promise.reject(errorMessages(res));
   }
@@ -278,7 +278,7 @@ function check400(res) {
 
 // 校验500
 function check500(res) {
-  console.warn("check500:", res);
+  console.warn("check500:", res, " at utils\\request.js:32");
   if (res.statusCode >= 500 && res.statusCode < 600) {
     return Promise.reject(errorMessages(res));
   }
@@ -287,7 +287,7 @@ function check500(res) {
 
 // 校验正常状态
 function checkStatus(response) {
-  console.warn("checkStatus:", response);
+  console.warn("checkStatus:", response, " at utils\\request.js:41");
   if (response.statusCode >= 200 && response.statusCode < 300) {
     return response;
   } else {
@@ -350,7 +350,7 @@ function toQueryString(object) {
 
 // 解析返回的数据
 function jsonParse(res) {
-  console.warn('jsonParse:', res);
+  console.warn('jsonParse:', res, " at utils\\request.js:104");
   var data = res && res.data || {};
   if (data && data.code === 200) {
     return data.data;
@@ -361,7 +361,7 @@ function jsonParse(res) {
 
 // 统一处理请求异常
 function httpErr(e) {
-  console.error('http error: ', e);
+  console.error('http error: ', e, " at utils\\request.js:115");
 }
 
 // 请求方法
@@ -418,7 +418,7 @@ function delay() {
 
     }, 10000);});
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -456,10 +456,10 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
-  \************************************************************/
+/***/ "./node_modules/@dcloudio/uni-app-plus/dist/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-app-plus/dist/index.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -633,7 +633,7 @@ function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 
           keyOption = keyOption(fromArgs[key], fromArgs, toArgs);
         }
         if (!keyOption) {// 不支持的参数
-          console.warn("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F ".concat(methodName, "\u6682\u4E0D\u652F\u6301").concat(key));
+          console.warn("app-plus ".concat(methodName, "\u6682\u4E0D\u652F\u6301").concat(key));
         } else if (isStr(keyOption)) {// 重写参数 key
           toArgs[keyOption] = fromArgs[key];
         } else if (isPlainObject(keyOption)) {// {name:newName,value:value}可重新指定参数 key:value
@@ -666,7 +666,7 @@ function wrapper(methodName, method) {
     var protocol = protocols[methodName];
     if (!protocol) {// 暂不支持的 api
       return function () {
-        console.error("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F \u6682\u4E0D\u652F\u6301".concat(methodName));
+        console.error("app-plus \u6682\u4E0D\u652F\u6301".concat(methodName));
       };
     }
     return function (arg1, arg2) {// 目前 api 最多两个参数
@@ -714,44 +714,17 @@ TODOS.forEach(function (name) {
   todoApis[name] = createTodoApi(name);
 });
 
-var providers = {
-  oauth: ['weixin'],
-  share: ['weixin'],
-  payment: ['wxpay'],
-  push: ['weixin'] };
-
-
-function getProvider(_ref2)
-
-
-
-
-{var service = _ref2.service,success = _ref2.success,fail = _ref2.fail,complete = _ref2.complete;
-  var res = false;
-  if (providers[service]) {
-    res = {
-      errMsg: 'getProvider:ok',
-      service: service,
-      provider: providers[service] };
-
-    isFn(success) && success(res);
-  } else {
-    res = {
-      errMsg: 'getProvider:fail:服务[' + service + ']不存在' };
-
-    isFn(fail) && fail(res);
+function requireNativePlugin(pluginName) {
+  /* eslint-disable no-undef */
+  if (typeof weex !== 'undefined') {
+    return weex.requireModule(pluginName);
   }
-  isFn(complete) && complete(res);
+  /* eslint-disable no-undef */
+  return __requireNativePlugin__(pluginName);
 }
 
-var extraApi = /*#__PURE__*/Object.freeze({
-  getProvider: getProvider });
-
-
-
-
-var api = /*#__PURE__*/Object.freeze({});
-
+var api = /*#__PURE__*/Object.freeze({
+  requireNativePlugin: requireNativePlugin });
 
 
 var MPPage = Page;
@@ -826,6 +799,16 @@ function handleLink(event) {
   }
 }
 
+function initPage$1(pageOptions) {
+  initComponent$1(pageOptions);
+}
+
+function initComponent$1(componentOptions) {
+  componentOptions.methods.$getAppWebview = function () {
+    return plus.webview.getWebviewById("".concat(this.__wxWebviewId__));
+  };
+}
+
 function initMocks(vm, mocks) {
   var mpInstance = vm.$mp[vm.mpType];
   mocks.forEach(function (mock) {
@@ -851,7 +834,7 @@ function getData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1224,11 +1207,6 @@ function initVm(vm) {
   if (this.$vm) {// 百度竟然 onShow 在 onLaunch 之前？
     return;
   }
-  {
-    if (!wx.canIUse('nextTick')) {// 事实 上2.2.3 即可，简单使用 2.3.0 的 nextTick 判断
-      console.error('当前微信基础库版本过低，请将 微信开发者工具-详情-项目设置-调试基础库版本 更换为`2.3.0`以上');
-    }
-  }
 
   this.$vm = vm;
 
@@ -1366,6 +1344,8 @@ function createPage(vueOptions) {
 
   initHooks(pageOptions.methods, hooks$1);
 
+  initPage$1(pageOptions);
+
   return Component(pageOptions);
 }
 
@@ -1449,6 +1429,8 @@ function createComponent(vueOptions) {
 
 
 
+  initComponent$1(componentOptions);
+
   return Component(componentOptions);
 }
 
@@ -1463,14 +1445,6 @@ if (typeof Proxy !== 'undefined') {
       if (api[name]) {
         return promisify(name, api[name]);
       }
-      {
-        if (extraApi[name]) {
-          return promisify(name, extraApi[name]);
-        }
-        if (todoApis[name]) {
-          return promisify(name, todoApis[name]);
-        }
-      }
       if (!hasOwn(wx, name) && !hasOwn(protocols, name)) {
         return;
       }
@@ -1479,15 +1453,6 @@ if (typeof Proxy !== 'undefined') {
 
 } else {
   uni.upx2px = upx2px;
-
-  {
-    Object.keys(todoApis).forEach(function (name) {
-      uni[name] = promisify(name, todoApis[name]);
-    });
-    Object.keys(extraApi).forEach(function (name) {
-      uni[name] = promisify(name, todoApis[name]);
-    });
-  }
 
   Object.keys(api).forEach(function (name) {
     uni[name] = promisify(name, api[name]);
@@ -6948,7 +6913,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -6969,14 +6934,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7045,7 +7010,7 @@ var patch = function(oldVnode, vnode) {
         });
         var diffData = diff(data, mpData);
         if (Object.keys(diffData).length) {
-            if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
                 console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
                     ']差量更新',
                     JSON.stringify(diffData));
@@ -9257,4 +9222,3 @@ module.exports = g;
 /***/ })
 
 }]);
-//# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

@@ -1,20 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { request, delay } from '../utils/request.js'
-import api from '../service/api.js'
-import states from '../states/constants.js'
+import states from '../states/index.js'
+import * as api from '../service/index.js'
 import { checkIsStartWithLoad } from '../utils/utils.js'
+import { request, delay } from '../utils/request.js'
 
 Vue.use(Vuex)
 
-// 初始化数据
-const state = {}
-Object.keys(states).forEach(item => {
-	state[states[item].key] = states[item].value
-})
+console.warn(states, 'states')
 
 const store = new Vuex.Store({
-    state,
+    state: states,
     mutations: {
 		saveOrUpdate(state, { key, value }) {
 			console.warn('key', key)
@@ -37,10 +33,10 @@ const store = new Vuex.Store({
 			})
 			// 处理异步请求为同步
 			let data = await request({
-				url: api[payload.stateKey].url,
-				method: payload.method || api[payload.method] || 'GET',
-				headers: payload.headers || api[payload.headers] || '',
-				params: payload.params || api[payload.params] || ''
+				url: api[payload.apiKey || payload.stateKey].url,
+				method: payload.method || api[payload.apiKey || payload.stateKey].method || 'GET',
+				headers: payload.headers || api[payload.apiKey || payload.stateKey].headers || '',
+				params: payload.params || api[payload.apiKey || payload.stateKey].params || ''
 			});
 			console.warn('data:', data)
 			if(!data) { // 请求数据异常
@@ -59,7 +55,7 @@ const store = new Vuex.Store({
 			} 
 			console.warn('data-:', data)
 			// 处理数据
-			const handleData = api[payload.stateKey].handler && api[payload.stateKey].handler({
+			const handleData = api[payload.apiKey || payload.stateKey].handler && api[payload.apiKey || payload.stateKey].handler({
 				props: state,
 				prop: state[payload.stateKey] || '',
 				resData: data
@@ -93,5 +89,3 @@ const store = new Vuex.Store({
 })
 
 export default store
-
-
