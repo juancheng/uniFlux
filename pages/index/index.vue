@@ -14,6 +14,8 @@
 	import {
 		asyncReq
 	} from '../../utils/utils.js'
+	
+	import { loadArticlePages } from '../../service/index.js'
 
 	export default {
 		data() {
@@ -22,14 +24,13 @@
 			}
 		},
 		computed: mapState({
-			articlePages: state => state.loadPublishArticles
+			articlePages: state => state[loadArticlePages.name]
 		}),
 		onLoad() {},
 		methods: {
 			asynBtn() {
 				asyncReq({
-					apiKey: 'loadArticlePages',
-					stateKey: "loadPublishArticles",
+					apiKey: loadArticlePages.name,
 					params: {
 						page: 0,
 						pageSize: 2

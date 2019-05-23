@@ -21,27 +21,52 @@ const store = new Vuex.Store({
     actions: { 
 		// 不会存在数据污染问题
 		async asyncReqData({state, commit}, {payload}) {
+			let checkResVal = {
+				props: '',
+				preProp: '',
+				prop: ''
+			}
+			// 校验apiKey 必须存在
+			if(!payload || !payload.apiKey) {
+				console.error('asyncReq function params object must has apiKey property. \n')
+				return checkResVal;
+			};
+			// 校验api[payload.apiKey] 必须存在
+			if(!api[payload.apiKey]) {
+				console.error(`please checkout service configuration file has ${payload.apiKey} object declare ? \n`)
+				return checkResVal;
+			};
+			// 校验states 是否存在 payload.apiKey 或者 payload.stateKey
+			if (payload.stateKey && !states[payload.stateKey]) {
+				console.error(`please checkout states configuration file has ${payload.stateKey} object declare ? \n`)
+				return checkResVal;
+			} else if (!states[payload.apiKey]) {
+				console.error(`please checkout states configuration file has ${payload.apiKey} object declare ? \n`)
+				return checkResVal;
+			}
+			
 			// 处理是否启用接口
-			const isLoadStart = checkIsStartWithLoad(payload.stateKey)
+			const isLoadStart = checkIsStartWithLoad(payload.stateKey || payload.apiKey)
 			console.warn('isLoadStart:', isLoadStart)
 			isLoadStart && commit('saveOrUpdate', {
-				key: payload.stateKey,
+				key: payload.stateKey || payload.apiKey,
 				value: {
 					loading: true,
 					loaded: false
 				}
 			})
+			const serviceObj = api[payload.apiKey]();
 			// 处理异步请求为同步
 			let data = await request({
-				url: api[payload.apiKey || payload.stateKey].url,
-				method: payload.method || api[payload.apiKey || payload.stateKey].method || 'GET',
-				headers: payload.headers || api[payload.apiKey || payload.stateKey].headers || '',
-				params: payload.params || api[payload.apiKey || payload.stateKey].params || ''
+				url: serviceObj.url,
+				method: payload.method || serviceObj.method || 'GET',
+				headers: payload.headers || serviceObj.headers || '',
+				params: payload.params || serviceObj.params || ''
 			});
 			console.warn('data:', data)
 			if(!data) { // 请求数据异常
 				isLoadStart && commit('saveOrUpdate', {
-					key: payload.stateKey,
+					key: payload.stateKey || payload.apiKey,
 					value: {
 						loading: false,
 						loaded: true
@@ -49,15 +74,15 @@ const store = new Vuex.Store({
 				})
 				return {
 					props: state,
-					preProp: state[payload.stateKey] || '',
+					preProp: state[payload.stateKey || payload.apiKey] || '',
 					prop: ''
 				}
 			} 
 			console.warn('data-:', data)
 			// 处理数据
-			const handleData = api[payload.apiKey || payload.stateKey].handler && api[payload.apiKey || payload.stateKey].handler({
+			const handleData = serviceObj.handler && serviceObj.handler({
 				props: state,
-				prop: state[payload.stateKey] || '',
+				prop: state[payload.stateKey || payload.apiKey] || '',
 				resData: data
 			}) || data
 			
@@ -65,20 +90,20 @@ const store = new Vuex.Store({
 			// 处理响应数据
 			const resData = {
 				props: state,
-				preProp: state[payload.stateKey] || '',
+				preProp: state[payload.stateKey || payload.apiKey] || '',
 				prop: handleData
 			}
 			
 			// 保存数据
 			isLoadStart ? commit('saveOrUpdate', {
-				key: payload.stateKey,
+				key: payload.stateKey || payload.apiKey,
 				value: {
 					loading: false,
 					loaded: true,
 					...handleData
 				}
 			}) : commit('saveOrUpdate', {
-				key: payload.stateKey,
+				key: payload.stateKey || payload.apiKey,
 				value: handleData
 			})
 			console.warn("resData", resData)
