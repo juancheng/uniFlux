@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import states from '../states/index.js'
-import * as api from '../service/index.js'
+import api from '../service/index.js'
 import { checkIsStartWithLoad } from '../utils/utils.js'
 import { request, delay } from '../utils/request.js'
 
 Vue.use(Vuex)
 
 console.warn(states, 'states')
+console.warn(api, 'api')
 
 const store = new Vuex.Store({
     state: states,
@@ -31,6 +32,7 @@ const store = new Vuex.Store({
 				console.error('asyncReq function params object must has apiKey property. \n')
 				return checkResVal;
 			};
+			console.warn('apiKey:', typeof payload.apiKey)
 			// 校验api[payload.apiKey] 必须存在
 			if(!api[payload.apiKey]) {
 				console.error(`please checkout service configuration file has ${payload.apiKey} object declare ? \n`)
@@ -38,10 +40,10 @@ const store = new Vuex.Store({
 			};
 			// 校验states 是否存在 payload.apiKey 或者 payload.stateKey
 			if (payload.stateKey && !states[payload.stateKey]) {
-				console.error(`please checkout states configuration file has ${payload.stateKey} object declare ? \n`)
+				console.error(`please checkout states configuration file has ${payload.stateKey} object declare1 ? \n`)
 				return checkResVal;
 			} else if (!states[payload.apiKey]) {
-				console.error(`please checkout states configuration file has ${payload.apiKey} object declare ? \n`)
+				console.error(`please checkout states configuration file has ${payload.apiKey} object declare1 ? \n`)
 				return checkResVal;
 			}
 			
@@ -55,7 +57,7 @@ const store = new Vuex.Store({
 					loaded: false
 				}
 			})
-			const serviceObj = api[payload.apiKey]();
+			const serviceObj = api[payload.apiKey];
 			// 处理异步请求为同步
 			let data = await request({
 				url: serviceObj.url,

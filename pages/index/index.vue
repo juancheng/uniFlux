@@ -15,7 +15,10 @@
 		asyncReq
 	} from '../../utils/utils.js'
 	
-	import { loadArticlePages } from '../../service/index.js'
+	import { apiKey } from '../../utils/constants.js'
+
+	const { loadPublishArticlePages } = apiKey;
+
 
 	export default {
 		data() {
@@ -24,13 +27,13 @@
 			}
 		},
 		computed: mapState({
-			articlePages: state => state[loadArticlePages.name]
+			articlePages: state => state[loadPublishArticlePages],
 		}),
 		onLoad() {},
 		methods: {
 			asynBtn() {
 				asyncReq({
-					apiKey: loadArticlePages.name,
+					apiKey: loadPublishArticlePages,
 					params: {
 						page: 0,
 						pageSize: 2
@@ -43,6 +46,7 @@
 					console.warn('preProp:', preProp)
 					console.warn('props,:', props, )
 					console.warn('prop,:', prop, )
+					console.warn('33:', this.articlePages)
 				})
 			},
 		}

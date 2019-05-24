@@ -1,35 +1,36 @@
 /**
  * 定义数据接口层、数据处理
  */
-const loadArticlePages = () => ({
-	url: 'blog/list',
-	handler: ({
-		props,
-		prop,
-		resData
-	}) => {
-		console.warn('api, props:', props)
-		console.warn('prop:', prop)
-		console.warn('resData:', resData)
-		return resData
-	}
-})
+import { apiKey } from '../utils/constants.js';
+const { loadArticleList, loadPublishArticlePages } = apiKey;
 
-const loadPublishArticlePages = () => ({
-	url: 'blog/list',
-	handler: ({
-		props,
-		prop,
-		resData
-	}) => {
-		console.warn('api, props:', props)
-		console.warn('prop:', prop)
-		console.warn('resData:', resData)
-		return resData
-	}
-})
+console.warn('apiKey: ', apiKey)
 
-export {
-	loadArticlePages,
-	loadPublishArticlePages,
+module.exports = exports =  {
+	[loadPublishArticlePages]: {
+		url: 'blog/list',
+		handler: ({
+			props,
+			prop,
+			resData
+		}) => {
+			console.warn('api, props:', props)
+			console.warn('prop:', prop)
+			console.warn('resData:', resData)
+			return resData
+		}
+	},
+	[loadArticleList]: {
+		url: 'blog/list',
+		handler: ({
+			props,
+			prop,
+			resData
+		}) => {
+			console.warn('api, props:', props)
+			console.warn('prop:', prop)
+			console.warn('resData:', resData)
+			return resData
+		}
+	}
 }

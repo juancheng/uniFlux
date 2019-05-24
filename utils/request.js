@@ -11,7 +11,7 @@ const errorMessages = (res) => `${res.statusCode}: ${res.data && res.data.error 
 
 // 校验300
 function check300(res) {
-	console.warn("check300:", res)
+	// console.warn("check300:", res)
 	if (res.statusCode >= 300 & res.statusCode < 400) {
 		return Promise.reject(errorMessages(res));
 	}
@@ -20,7 +20,7 @@ function check300(res) {
 
 // 校验400
 function check400(res) {
-	console.warn("check400:", res)
+	// console.warn("check400:", res)
 	if (res.statusCode >= 400 && res.statusCode < 500) {
 		return Promise.reject(errorMessages(res));
 	}
@@ -29,7 +29,7 @@ function check400(res) {
 
 // 校验500
 function check500(res) {
-	console.warn("check500:", res)
+	// console.warn("check500:", res)
 	if (res.statusCode >= 500 && res.statusCode < 600) {
 		return Promise.reject(errorMessages(res));
 	}
@@ -38,7 +38,7 @@ function check500(res) {
 
 // 校验正常状态
 function checkStatus(response) {
-	console.warn("checkStatus:", response)
+	// console.warn("checkStatus:", response)
 	if (response.statusCode >= 200 && response.statusCode < 300) {
 		return response;
 	} else {
@@ -101,7 +101,7 @@ function toQueryString(object) {
 
 // 解析返回的数据
 function jsonParse(res) {
-	console.warn('jsonParse:', res)
+	// console.warn('jsonParse:', res)
 	const data = res && res.data || {}
 	if (data && data.code === 200) {
 		return data.data
