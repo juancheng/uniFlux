@@ -1,449 +1,5 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
 
-/***/ "../../../../../workspace/workspace_hb/uniFlux/main.js":
-/*!*************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/main.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ "../../../../../workspace/workspace_hb/uniFlux/pages.json");
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ "../../../../../workspace/workspace_hb/uniFlux/App.vue"));
-var _index = _interopRequireDefault(__webpack_require__(/*! ./store/index.js */ "../../../../../workspace/workspace_hb/uniFlux/store/index.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
-
-_vue.default.config.productionTip = false;
-_vue.default.prototype.$store = _index.default;
-
-_App.default.mpType = 'app';
-
-_vue.default.config.devtools = true;
-
-var app = new _vue.default(_objectSpread({
-  store: _index.default },
-_App.default));
-
-createApp(app).$mount();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createApp"]))
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/main.js?{\"page\":\"pages%2Findex%2Findex\"}":
-/*!**********************************************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/main.js?{"page":"pages%2Findex%2Findex"} ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../../workspace/workspace_hb/uniFlux/pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ "../../../../../workspace/workspace_hb/uniFlux/pages/index/index.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_index.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/pages.json":
-/*!****************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/pages.json ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/service/api.js":
-/*!********************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/service/api.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-var _constants = __webpack_require__(/*! ../states/constants.js */ "../../../../../workspace/workspace_hb/uniFlux/states/constants.js");function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
-
-
-
-/**
-                                                                                                                                                                                                                                                                            * 定义数据接口层、数据处理
-                                                                                                                                                                                                                                                                            */
-module.exports = _defineProperty({},
-_constants.loadArticlePages.key, {
-  url: 'blog/list',
-  handler: function handler(_ref) {var props = _ref.props,prop = _ref.prop,resData = _ref.resData;
-    console.warn('props:', props);
-    console.warn('prop:', prop);
-    console.warn('resData:', resData);
-    return resData;
-  } });
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/states/constants.js":
-/*!*************************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/states/constants.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
- // 定义vueX的基本数据格式类型
-module.exports = {
-  loadArticlePages: {
-    key: 'loadArticlePages',
-    value: {} } };
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/store/index.js":
-/*!********************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/store/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js"));
-var _request = __webpack_require__(/*! ../utils/request.js */ "../../../../../workspace/workspace_hb/uniFlux/utils/request.js");
-var _api = _interopRequireDefault(__webpack_require__(/*! ../service/api.js */ "../../../../../workspace/workspace_hb/uniFlux/service/api.js"));
-var _constants = _interopRequireDefault(__webpack_require__(/*! ../states/constants.js */ "../../../../../workspace/workspace_hb/uniFlux/states/constants.js"));
-var _utils = __webpack_require__(/*! ../utils/utils.js */ "../../../../../workspace/workspace_hb/uniFlux/utils/utils.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
-
-_vue.default.use(_vuex.default);
-
-// 初始化数据
-var state = {};
-Object.keys(_constants.default).forEach(function (item) {
-  state[_constants.default[item].key] = _constants.default[item].value;
-});
-
-var store = new _vuex.default.Store({
-  state: state,
-  mutations: {
-    saveOrUpdate: function saveOrUpdate(state, _ref) {var key = _ref.key,value = _ref.value;
-      console.warn('key', key);
-      console.warn('value', value);
-      state[key] = _objectSpread({}, state[key], value);
-    } },
-
-  actions: {
-    // 不会存在数据污染问题
-    asyncReqData: function () {var _asyncReqData = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref2, _ref3) {var state, commit, payload, isLoadStart, data, handleData, resData;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:state = _ref2.state, commit = _ref2.commit;payload = _ref3.payload;
-                // 处理是否启用接口
-                isLoadStart = (0, _utils.checkIsStartWithLoad)(payload.stateKey);
-                console.warn('isLoadStart:', isLoadStart);
-                isLoadStart && commit('saveOrUpdate', {
-                  key: payload.stateKey,
-                  value: {
-                    loading: true,
-                    loaded: false } });
-
-
-                // 处理异步请求为同步
-                _context.next = 7;return (0, _request.request)({
-                  url: _api.default[payload.stateKey].url,
-                  method: payload.method || _api.default[payload.method] || 'GET',
-                  headers: payload.headers || _api.default[payload.headers] || '',
-                  params: payload.params || _api.default[payload.params] || '' });case 7:data = _context.sent;
-
-                console.warn('data:', data);if (
-                data) {_context.next = 12;break;} // 请求数据异常
-                isLoadStart && commit('saveOrUpdate', {
-                  key: payload.stateKey,
-                  value: {
-                    loading: false,
-                    loaded: true } });return _context.abrupt("return",
-
-
-                {
-                  props: state,
-                  preProp: state[payload.stateKey] || '',
-                  prop: '' });case 12:
-
-
-                console.warn('data-:', data);
-                // 处理数据
-                handleData = _api.default[payload.stateKey].handler && _api.default[payload.stateKey].handler({
-                  props: state,
-                  prop: state[payload.stateKey] || '',
-                  resData: data }) ||
-                data;
-
-
-                // 处理响应数据
-                resData = {
-                  props: state,
-                  preProp: state[payload.stateKey] || '',
-                  prop: handleData
-
-
-                  // 保存数据
-                };isLoadStart ? commit('saveOrUpdate', {
-                  key: payload.stateKey,
-                  value: _objectSpread({
-                    loading: false,
-                    loaded: true },
-                  handleData) }) :
-
-                commit('saveOrUpdate', {
-                  key: payload.stateKey,
-                  value: handleData });
-
-                console.warn("resData", resData);
-                // 返回后台返回的数据
-                return _context.abrupt("return", resData);case 18:case "end":return _context.stop();}}}, _callee, this);}));function asyncReqData(_x, _x2) {return _asyncReqData.apply(this, arguments);}return asyncReqData;}() } });var _default =
-
-
-
-
-store;exports.default = _default;
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/utils/config.js":
-/*!*********************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/utils/config.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-module.exports = {
-  serverUrl: 'http://localhost:8081/',
-  wxServerUrl: 'http://wx.51zouchuqu.com/wechat/',
-  scServerUrl: 'http://sensor.51zouchuqu.com:8106/sa?project=default' };
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/utils/constants.js":
-/*!************************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/utils/constants.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
- /**
-               * 定义常量
-               */
-module.exports = {
-  storageKey: { // 本地存储使用的关键字
-    token: 'TOKEN' } };
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/utils/request.js":
-/*!**********************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/utils/request.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.request = request;exports.delay = delay;var _config = _interopRequireDefault(__webpack_require__(/*! ./config.js */ "../../../../../workspace/workspace_hb/uniFlux/utils/config.js"));
-var _constants = __webpack_require__(/*! ./constants.js */ "../../../../../workspace/workspace_hb/uniFlux/utils/constants.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var
-
-
-
-serverUrl =
-_config.default.serverUrl;
-
-// 处理错误码
-var errorMessages = function errorMessages(res) {return "".concat(res.statusCode, ": ").concat(res.data && res.data.error || res.data.message);};
-
-// 校验300
-function check300(res) {
-  console.warn("check300:", res);
-  if (res.statusCode >= 300 & res.statusCode < 400) {
-    return Promise.reject(errorMessages(res));
-  }
-  return res;
-}
-
-// 校验400
-function check400(res) {
-  console.warn("check400:", res);
-  if (res.statusCode >= 400 && res.statusCode < 500) {
-    return Promise.reject(errorMessages(res));
-  }
-  return res;
-}
-
-// 校验500
-function check500(res) {
-  console.warn("check500:", res);
-  if (res.statusCode >= 500 && res.statusCode < 600) {
-    return Promise.reject(errorMessages(res));
-  }
-  return res;
-}
-
-// 校验正常状态
-function checkStatus(response) {
-  console.warn("checkStatus:", response);
-  if (response.statusCode >= 200 && response.statusCode < 300) {
-    return response;
-  } else {
-    return response;
-  }
-}
-
-function setUriParam(keys, value, keyPostfix) {
-  var keyStr = keys[0];
-
-  keys.slice(1).forEach(function (key) {
-    keyStr += "[".concat(key, "]");
-  });
-
-  if (keyPostfix) {
-    keyStr += keyPostfix;
-  }
-
-  return "".concat(encodeURIComponent(keyStr), "=").concat(encodeURIComponent(value));
-}
-
-function getUriParam(keys, object) {
-  var array = [];
-
-  if (object instanceof Array) {
-    object.forEach(function (value) {
-      array.push(setUriParam(keys, value, '[]'));
-    });
-  } else if (object instanceof Object) {
-    for (var key in object) {
-      if (object.hasOwnProperty(key)) {
-        var value = object[key];
-        array.push(getUriParam(keys.concat(key), value));
-      }
-    }
-  } else {
-    if (object !== undefined) {
-      array.push(setUriParam(keys, object));
-    }
-  }
-
-  return array.join('&');
-}
-
-// 解析字符串
-function toQueryString(object) {
-  var array = [];
-
-  for (var key in object) {
-    if (object.hasOwnProperty(key)) {
-      var str = getUriParam([key], object[key]);
-      if (str !== '') {
-        array.push(str);
-      }
-    }
-  }
-
-  return array.join('&');
-}
-
-// 解析返回的数据
-function jsonParse(res) {
-  console.warn('jsonParse:', res);
-  var data = res && res.data || {};
-  if (data && data.code === 200) {
-    return data.data;
-  }
-  // 自定义异常提示或者处理
-  // data.message
-}
-
-// 统一处理请求异常
-function httpErr(e) {
-  console.error('http error: ', e);
-}
-
-// 请求方法
-function request(options) {
-  var url = options && options.url || '';
-  var mergeUrl = url;
-  if (!url.startsWith('http')) {
-    if (url.startsWith("/")) {
-      url = url.substring(1);
-    }
-    mergeUrl = serverUrl.concat(url);
-  }
-  var defaultOptions = {
-    method: 'GET' };
-
-  var opts = Object.assign({}, defaultOptions, _objectSpread({}, options));
-
-  // add query params to url when method is GET
-  if (opts && opts.method == "GET" && opts['params']) {
-    mergeUrl = mergeUrl + '?' + toQueryString(opts['params']);
-  }
-  opts.url = mergeUrl;
-  opts.header = _objectSpread({},
-  opts.headers, {
-    "x-auth-token": uni.getStorageSync(_constants.storageKey.token),
-    "p": '8' });
-
-
-  return new Promise(function (resolve, reject) {return uni.request(_objectSpread({},
-    opts, {
-      success: function success(data) {
-        resolve(data);
-      },
-      fail: function fail() {// 网络无法链接、403
-        reject('请求异常...');
-      } }));}).
-
-  then(check300).
-  then(check400).
-  then(check500).
-  then(checkStatus).
-  then(jsonParse).
-  catch(httpErr);
-
-}
-
-// 延迟执行
-function delay() {
-  return new Promise(function (resolve, reject) {return setTimeout(function () {
-      resolve({
-        code: 200,
-        data: {},
-        message: '请求异常' });
-
-    }, 10000);});
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
-
-/***/ }),
-
-/***/ "../../../../../workspace/workspace_hb/uniFlux/utils/utils.js":
-/*!********************************************************!*\
-  !*** D:/workspace/workspace_hb/uniFlux/utils/utils.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.asyncReq = exports.checkIsStartWithLoad = void 0;var _index = _interopRequireDefault(__webpack_require__(/*! ../store/index.js */ "../../../../../workspace/workspace_hb/uniFlux/store/index.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-// 校验load
-var checkIsStartWithLoad = function checkIsStartWithLoad(str) {// true: 字符串load开头
-  return str && str.toLocaleLowerCase().startsWith('load') || false;
-};
-
-// 发起异步请求
-exports.checkIsStartWithLoad = checkIsStartWithLoad;var asyncReq = function asyncReq(vue, payload) {return _index.default.dispatch({
-    type: 'asyncReqData',
-    payload: payload });};exports.asyncReq = asyncReq;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -506,7 +62,7 @@ var camelize = cached(function (str) {
   return str.replace(camelizeRE, function (_, c) {return c ? c.toUpperCase() : '';});
 });
 
-var SYNC_API_RE = /requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$/;
+var SYNC_API_RE = /subNVue|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$/;
 
 var CONTEXT_API_RE = /^create|Manager$/;
 
@@ -610,7 +166,45 @@ function upx2px(number, newDeviceWidth) {
   return number < 0 ? -result : result;
 }
 
-var protocols = {};
+var previewImage = {
+  args: function args(fromArgs) {
+    var currentIndex = parseInt(fromArgs.current);
+    if (isNaN(currentIndex)) {
+      return;
+    }
+    var urls = fromArgs.urls;
+    if (!Array.isArray(urls)) {
+      return;
+    }
+    var len = urls.length;
+    if (!len) {
+      return;
+    }
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    } else if (currentIndex >= len) {
+      currentIndex = len - 1;
+    }
+    if (currentIndex > 0) {
+      fromArgs.current = urls[currentIndex];
+      fromArgs.urls = urls.filter(
+      function (item, index) {return index < currentIndex ? item !== urls[currentIndex] : true;});
+
+    } else {
+      fromArgs.current = urls[0];
+    }
+    return {
+      indicator: false,
+      loop: false };
+
+  } };
+
+
+var protocols = {
+  previewImage: previewImage };
+
+var todos = [];
+var canIUses = [];
 
 var CALLBACKS = ['success', 'fail', 'cancel', 'complete'];
 
@@ -775,8 +369,7 @@ function initTriggerEvent(mpInstance) {
   };
 }
 
-Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var name = 'onLoad';
+function initHook(name, options) {
   var oldHook = options[name];
   if (!oldHook) {
     options[name] = function () {
@@ -788,22 +381,53 @@ Page = function Page() {var options = arguments.length > 0 && arguments[0] !== u
       return oldHook.apply(this, args);
     };
   }
+}
+
+Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  initHook('onLoad', options);
   return MPPage(options);
 };
 
-var behavior = Behavior({
-  created: function created() {
-    initTriggerEvent(this);
-  } });
-
-
 Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  (options.behaviors || (options.behaviors = [])).unshift(behavior);
+  initHook('created', options);
   return MPComponent(options);
 };
 
 var mocks = ['__route__', '__wxExparserNodeId__', '__wxWebviewId__'];
 
+function initPage(pageOptions) {
+  return initComponent(pageOptions);
+}
+
+function initComponent(componentOptions) {
+  return Component(componentOptions);
+}
+
+function initBehavior(options) {
+  return Behavior(options);
+}
+function initRefs(vm) {
+  var mpInstance = vm.$scope;
+  Object.defineProperty(vm, '$refs', {
+    get: function get() {
+      var $refs = {};
+      var components = mpInstance.selectAllComponents('.vue-ref');
+      components.forEach(function (component) {
+        var ref = component.dataset.ref;
+        $refs[ref] = component.$vm || component;
+      });
+      var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
+      forComponents.forEach(function (component) {
+        var ref = component.dataset.ref;
+        if (!$refs[ref]) {
+          $refs[ref] = [];
+        }
+        $refs[ref].push(component.$vm || component);
+      });
+      return $refs;
+    } });
+
+}
 function triggerLink(mpInstance, vueOptions) {
   mpInstance.triggerEvent('__l', mpInstance.$vm || vueOptions, {
     bubbles: true,
@@ -826,9 +450,9 @@ function handleLink(event) {
   }
 }
 
-function initMocks(vm, mocks) {
+function initMocks(vm, mocks$$1) {
   var mpInstance = vm.$mp[vm.mpType];
-  mocks.forEach(function (mock) {
+  mocks$$1.forEach(function (mock) {
     if (hasOwn(mpInstance, mock)) {
       vm[mock] = mpInstance[mock];
     }
@@ -851,7 +475,7 @@ function getData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -913,7 +537,7 @@ function getBehaviors(vueOptions) {
   }
   if (isPlainObject(vueExtends) && vueExtends.props) {
     behaviors.push(
-    Behavior({
+    initBehavior({
       properties: getProperties(vueExtends.props, true) }));
 
 
@@ -922,7 +546,7 @@ function getBehaviors(vueOptions) {
     vueMixins.forEach(function (vueMixin) {
       if (isPlainObject(vueMixin) && vueMixin.props) {
         behaviors.push(
-        Behavior({
+        initBehavior({
           properties: getProperties(vueMixin.props, true) }));
 
 
@@ -1190,29 +814,6 @@ function handleEvent(event) {var _this = this;
   });
 }
 
-function initRefs(vm) {
-  var mpInstance = vm.$mp[vm.mpType];
-  Object.defineProperty(vm, '$refs', {
-    get: function get() {
-      var $refs = {};
-      var components = mpInstance.selectAllComponents('.vue-ref');
-      components.forEach(function (component) {
-        var ref = component.dataset.ref;
-        $refs[ref] = component.$vm || component;
-      });
-      var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
-      forComponents.forEach(function (component) {
-        var ref = component.dataset.ref;
-        if (!$refs[ref]) {
-          $refs[ref] = [];
-        }
-        $refs[ref].push(component.$vm || component);
-      });
-      return $refs;
-    } });
-
-}
-
 var hooks = [
 'onHide',
 'onError',
@@ -1238,24 +839,27 @@ function initVm(vm) {
 }
 
 function createApp(vm) {
-  // 外部初始化时 Vue 还未初始化，放到 createApp 内部初始化 mixin
+
   _vue.default.mixin({
     beforeCreate: function beforeCreate() {
       if (!this.$options.mpType) {
         return;
       }
+
       this.mpType = this.$options.mpType;
+
       this.$mp = _defineProperty({
         data: {} },
       this.mpType, this.$options.mpInstance);
+
+
+      this.$scope = this.$options.mpInstance;
 
       delete this.$options.mpType;
       delete this.$options.mpInstance;
 
       if (this.mpType !== 'app') {
-        {// 头条的 selectComponent 竟然是异步的
-          initRefs(this);
-        }
+        initRefs(this);
         initMocks(this, mocks);
       }
     },
@@ -1366,7 +970,7 @@ function createPage(vueOptions) {
 
   initHooks(pageOptions.methods, hooks$1);
 
-  return Component(pageOptions);
+  return initPage(pageOptions, vueOptions);
 }
 
 function initVm$2(VueComponent) {
@@ -1374,16 +978,18 @@ function initVm$2(VueComponent) {
     return;
   }
 
+  var properties = this.properties;
+
   var options = {
     mpType: 'component',
     mpInstance: this,
-    propsData: this.properties };
+    propsData: properties };
 
   // 初始化 vue 实例
   this.$vm = new VueComponent(options);
 
   // 处理$slots,$scopedSlots（暂不支持动态变化$slots）
-  var vueSlots = this.properties.vueSlots;
+  var vueSlots = properties.vueSlots;
   if (Array.isArray(vueSlots) && vueSlots.length) {
     var $slots = Object.create(null);
     vueSlots.forEach(function (slotName) {
@@ -1399,11 +1005,17 @@ function initVm$2(VueComponent) {
 function createComponent(vueOptions) {
   vueOptions = vueOptions.default || vueOptions;
 
+  var VueComponent;
+  if (isFn(vueOptions)) {
+    VueComponent = vueOptions; // TODO form-field props.name,props.value
+    vueOptions = VueComponent.extendOptions;
+  } else {
+    VueComponent = _vue.default.extend(vueOptions);
+  }
+
   var behaviors = getBehaviors(vueOptions);
 
   var properties = getProperties(vueOptions.props, false, vueOptions.__file);
-
-  var VueComponent = _vue.default.extend(vueOptions);
 
   var componentOptions = {
     options: {
@@ -1449,8 +1061,19 @@ function createComponent(vueOptions) {
 
 
 
-  return Component(componentOptions);
+  return initComponent(componentOptions, vueOptions);
 }
+
+todos.forEach(function (todoApi) {
+  protocols[todoApi] = false;
+});
+
+canIUses.forEach(function (canIUseApi) {
+  var apiName = protocols[canIUseApi] && protocols[canIUseApi].name ? protocols[canIUseApi].name : canIUseApi;
+  if (!wx.canIUse(apiName)) {
+    protocols[canIUseApi] = false;
+  }
+});
 
 var uni = {};
 
@@ -2141,8 +1764,8 @@ if (true) {
 
   formatComponentName = function (vm, includeFile) {
     {
-      if(vm.$mp && vm.$mp[vm.mpType]){
-        return vm.$mp[vm.mpType].is
+      if(vm.$scope && vm.$scope.is){
+        return vm.$scope.is
       }
     }
     if (vm.$root === vm) {
@@ -6948,8 +6571,8 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
-            var mpInstance = vm.$mp[vm.mpType];
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
         }
@@ -6969,15 +6592,15 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
-            var mpInstance = vm.$mp[vm.mpType];
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+            var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
-            var mpInstance$1 = vm.$mp[vm.mpType];
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+            var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
         }
@@ -7036,7 +6659,7 @@ var patch = function(oldVnode, vnode) {
         return
     }
     if (this.mpType === 'page' || this.mpType === 'component') {
-        var mpInstance = this.$mp[this.mpType];
+        var mpInstance = this.$scope;
         var data = cloneWithData(this);
         data.__webviewId__ = mpInstance.data.__webviewId__;
         var mpData = Object.create(null);
@@ -7045,7 +6668,7 @@ var patch = function(oldVnode, vnode) {
         });
         var diffData = diff(data, mpData);
         if (Object.keys(diffData).length) {
-            if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
                 console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
                     ']差量更新',
                     JSON.stringify(diffData));
@@ -7218,8 +6841,8 @@ function internalMixin(Vue) {
     var oldEmit = Vue.prototype.$emit;
 
     Vue.prototype.$emit = function(event) {
-        if (this.$mp && event) {
-            this.$mp[this.mpType]['triggerEvent'](event, {
+        if (this.$scope && event) {
+            this.$scope['triggerEvent'](event, {
                 __args__: toArray(arguments, 1)
             });
         }
@@ -7232,8 +6855,8 @@ function internalMixin(Vue) {
 
     MP_METHODS.forEach(function (method) {
         Vue.prototype[method] = function(args) {
-            if (this.$mp) {
-                return this.$mp[this.mpType][method](args)
+            if (this.$scope) {
+                return this.$scope[method](args)
             }
         };
     });
@@ -7312,6 +6935,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onShow',
     'onHide',
     'onUniNViewMessage',
+    'onError',
     //Page
     'onLoad',
     // 'onShow',
@@ -7322,6 +6946,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onReachBottom',
     'onTabItemTap',
     'onShareAppMessage',
+    'onResize',
     'onPageScroll',
     'onNavigationBarButtonTap',
     'onBackPress',
@@ -7329,7 +6954,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onNavigationBarSearchInputConfirmed',
     'onNavigationBarSearchInputClicked',
     //Component
-    'onReady', // 兼容旧版本，应该移除该事件
+    // 'onReady', // 兼容旧版本，应该移除该事件
     'onPageShow',
     'onPageHide',
     'onPageResize'
@@ -9253,6 +8878,1126 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\main.js":
+/*!*************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/main.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ "E:\\workspace\\space_uniapp\\uniFlux\\pages.json");
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ "E:\\workspace\\space_uniapp\\uniFlux\\App.vue"));
+var _index = _interopRequireDefault(__webpack_require__(/*! ./store/index.js */ "E:\\workspace\\space_uniapp\\uniFlux\\store\\index.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+_vue.default.config.productionTip = false;
+_vue.default.prototype.$store = _index.default;
+
+_App.default.mpType = 'app';
+
+_vue.default.config.devtools = true;
+
+var app = new _vue.default(_objectSpread({
+  store: _index.default },
+_App.default));
+
+createApp(app).$mount();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createApp"]))
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\main.js?{\"page\":\"pages%2Findex%2Findex\"}":
+/*!**********************************************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\workspace\\space_uniapp\\uniFlux\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ "E:\\workspace\\space_uniapp\\uniFlux\\pages\\index\\index.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_index.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\node_modules\\mescroll-uni\\mescroll-uni-option.js":
+/*!******************************************************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/node_modules/mescroll-uni/mescroll-uni-option.js ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // mescroll 全局配置
+var GlobalOption = {
+  down: {
+    textInOffset: '下拉刷新', // 下拉的距离在offset范围内的提示文本
+    textOutOffset: '释放更新', // 下拉的距离大于offset范围的提示文本
+    textLoading: '加载中 ...', // 加载中的提示文本
+    offset: 80 // 在列表顶部,下拉大于80upx,松手即可触发下拉刷新的回调
+  },
+  up: {
+    textLoading: '加载中 ...', // 加载中的提示文本
+    textNoMore: '-- END --', // 没有更多数据的提示文本
+    toTop: {
+      // 回到顶部按钮,需配置src才显示
+      src: "http://www.mescroll.com/img/mescroll-totop.png?v=1", // 图片路径 (建议放入static目录, 如 /static/img/mescroll-totop.png )
+      offset: 1000, // 列表滚动多少距离才显示回到顶部按钮,默认1000
+      duration: 300 // 回到顶部的动画时长,默认300ms
+    },
+    empty: {
+      use: true, // 是否显示空布局
+      icon: "http://www.mescroll.com/img/mescroll-empty.png?v=1", // 图标路径 (建议放入static目录, 如 /static/img/mescroll-empty.png )
+      tip: '~ 暂无相关数据 ~' // 提示
+    } } };var _default =
+
+
+
+GlobalOption;exports.default = _default;
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\node_modules\\mescroll-uni\\mescroll-uni.js":
+/*!***********************************************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/node_modules/mescroll-uni/mescroll-uni.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = MeScroll; /*! mescroll-uni
+                                                                                                        * version 1.0.0
+                                                                                                        * 2019-03-10 文举
+                                                                                                        * http://www.mescroll.com
+                                                                                                        */
+function MeScroll(options) {
+  var me = this;
+  me.version = '1.0.0'; // mescroll版本号
+  me.options = options || {}; // 配置
+
+  me.isDownScrolling = false; // 是否在执行下拉刷新的回调
+  me.isUpScrolling = false; // 是否在执行上拉加载的回调
+  var hasDownCallback = me.options.down && me.options.down.callback; // 是否配置了down的callback
+
+  // 初始化下拉刷新
+  me.initDownScroll();
+  // 初始化上拉加载,则初始化
+  me.initUpScroll();
+
+  // 自动加载
+  setTimeout(function () {// 待主线程执行完毕再执行,避免new MeScroll未初始化,在回调获取不到mescroll的实例
+    // 自动触发下拉刷新 (只有配置了down的callback才自动触发下拉刷新)
+    if (me.optDown.use && me.optDown.auto && hasDownCallback) {
+      if (me.optDown.autoShowLoading) {
+        me.triggerDownScroll(); // 显示下拉进度,执行下拉回调
+      } else {
+        me.optDown.callback && me.optDown.callback(me); // 不显示下拉进度,直接执行下拉回调
+      }
+    }
+    // 自动触发上拉加载
+    me.optUp.use && me.optUp.auto && !me.isUpAutoLoad && me.triggerUpScroll();
+  }, 30); // 需让me.optDown.inited和me.optUp.inited先执行
+}
+
+/* 配置参数:下拉刷新 */
+MeScroll.prototype.extendDownScroll = function (optDown) {
+  // 下拉刷新的配置
+  MeScroll.extend(optDown, {
+    use: true, // 是否启用下拉刷新; 默认true
+    auto: true, // 是否在初始化完毕之后自动执行下拉刷新的回调; 默认true
+    autoShowLoading: false, // 如果设置auto=true(在初始化完毕之后自动执行下拉刷新的回调),那么是否显示下拉刷新的进度; 默认false
+    isLock: false, // 是否锁定下拉刷新,默认false;
+    isBoth: true, // 下拉刷新时,如果滑动到列表底部是否可以同时触发上拉加载;默认true,两者可同时触发;
+    offset: 80, // 在列表顶部,下拉大于80px,松手即可触发下拉刷新的回调
+    inOffsetRate: 1, // 在列表顶部,下拉的距离小于offset时,改变下拉区域高度比例;值小于1且越接近0,高度变化越小,表现为越往下越难拉
+    outOffsetRate: 0.2, // 在列表顶部,下拉的距离大于offset时,改变下拉区域高度比例;值小于1且越接近0,高度变化越小,表现为越往下越难拉
+    bottomOffset: 20, // 当手指touchmove位置在距离body底部20px范围内的时候结束上拉刷新,避免Webview嵌套导致touchend事件不执行
+    minAngle: 45, // 向下滑动最少偏移的角度,取值区间  [0,90];默认45度,即向下滑动的角度大于45度则触发下拉;而小于45度,将不触发下拉,避免与左右滑动的轮播等组件冲突;
+    textInOffset: '下拉刷新', // 下拉的距离在offset范围内的提示文本
+    textOutOffset: '释放更新', // 下拉的距离大于offset范围的提示文本
+    textLoading: '加载中 ...', // 加载中的提示文本
+    inited: null, // 下拉刷新初始化完毕的回调
+    inOffset: null, // 下拉的距离进入offset范围内那一刻的回调
+    outOffset: null, // 下拉的距离大于offset那一刻的回调
+    onMoving: null, // 下拉过程中的回调,滑动过程一直在执行; rate下拉区域当前高度与指定距离的比值(inOffset: rate<1; outOffset: rate>=1); downHight当前下拉区域的高度
+    beforeLoading: null, // 准备触发下拉刷新的回调: 如果return true,将不触发showLoading和callback回调; 常用来完全自定义下拉刷新, 参考案例【淘宝 v6.8.0】
+    showLoading: null, // 显示下拉刷新进度的回调
+    afterLoading: null, // 准备结束下拉的回调. 返回结束下拉的延时执行时间,默认0ms; 常用于结束下拉之前再显示另外一小段动画,才去隐藏下拉刷新的场景, 参考案例【dotJump】
+    endDownScroll: null, // 结束下拉刷新的回调
+    callback: function callback(mescroll) {
+      // 下拉刷新的回调;默认重置上拉加载列表为第一页
+      mescroll.resetUpScroll();
+    } });
+
+};
+
+/* 配置参数:上拉加载 */
+MeScroll.prototype.extendUpScroll = function (optUp) {
+  // 上拉加载的配置
+  MeScroll.extend(optUp, {
+    use: true, // 是否启用上拉加载; 默认true
+    auto: true, // 是否在初始化完毕之后自动执行上拉加载的回调; 默认true
+    isLock: false, // 是否锁定上拉加载,默认false;
+    isBoth: true, // 上拉加载时,如果滑动到列表顶部是否可以同时触发下拉刷新;默认true,两者可同时触发;
+    callback: null, // 上拉加载的回调;function(page,mescroll){ }
+    page: {
+      num: 0, // 当前页码,默认0,回调之前会加1,即callback(page)会从1开始
+      size: 10, // 每页数据的数量
+      time: null // 加载第一页数据服务器返回的时间; 防止用户翻页时,后台新增了数据从而导致下一页数据重复;
+    },
+    noMoreSize: 5, // 如果列表已无数据,可设置列表的总数量要大于等于5条才显示无更多数据;避免列表数据过少(比如只有一条数据),显示无更多数据会不好看
+    textLoading: '加载中 ...', // 加载中的提示文本
+    textNoMore: '-- END --', // 没有更多数据的提示文本
+    inited: null, // 初始化完毕的回调
+    showLoading: null, // 显示加载中的回调
+    showNoMore: null, // 显示无更多数据的回调
+    hideUpScroll: null, // 隐藏上拉加载的回调
+    toTop: {
+      // 回到顶部按钮,需配置src才显示
+      src: null, // 图片路径,默认null (建议写成网络图,不必考虑相对路径)
+      offset: 1000, // 列表滚动多少距离才显示回到顶部按钮,默认1000
+      duration: 300, // 回到顶部的动画时长,默认300ms
+      btnClick: null, // 点击按钮的回调
+      onShow: null // 是否显示的回调
+    },
+    empty: {
+      use: true, // 是否显示空布局
+      icon: null, // 图标路径
+      tip: '~ 暂无相关数据 ~', // 提示
+      btnText: '', // 按钮
+      btnClick: null, // 点击按钮的回调
+      onShow: null // 是否显示的回调
+    } });
+
+};
+
+/* 配置参数 */
+MeScroll.extend = function (userOption, defaultOption) {
+  if (!userOption) return defaultOption;
+  for (var key in defaultOption) {
+    if (userOption[key] == null) {
+      userOption[key] = defaultOption[key];
+    } else if (typeof userOption[key] === 'object') {
+      MeScroll.extend(userOption[key], defaultOption[key]); // 深度匹配
+    }
+  }
+  return userOption;
+};
+
+/* -------初始化下拉刷新------- */
+MeScroll.prototype.initDownScroll = function () {
+  var me = this;
+  // 配置参数
+  me.optDown = me.options.down || {};
+  me.extendDownScroll(me.optDown);
+
+  me.downHight = 0; // 下拉区域的高度
+
+  // 在页面中加入下拉布局
+  if (me.optDown.use && me.optDown.inited) {
+    // 初始化完毕的回调
+    setTimeout(function () {// 待主线程执行完毕再执行,避免new MeScroll未初始化,在回调获取不到mescroll的实例
+      me.optDown.inited(me);
+    }, 0);
+  }
+};
+
+/* 列表touchstart事件 */
+MeScroll.prototype.touchstartEvent = function (e) {
+  if (!this.optDown.use) return;
+  var me = this;
+
+  me.startPoint = me.getPoint(e); // 记录起点
+  me.lastPoint = me.startPoint; // 重置上次move的点
+  me.maxTouchmoveY = me.getBodyHeight() - me.optDown.bottomOffset; // 手指触摸的最大范围(写在touchstart避免body获取高度为0的情况)
+  me.inTouchend = false; // 标记不是touchend
+};
+
+/* 列表touchmove事件 */
+MeScroll.prototype.touchmoveEvent = function (e) {
+  if (!this.startPoint) return;
+  var me = this;
+
+  var scrollTop = me.getScrollTop(); // 当前滚动条的距离
+  var curPoint = me.getPoint(e); // 当前点
+
+  var moveY = curPoint.y - me.startPoint.y; // 和起点比,移动的距离,大于0向下拉,小于0向上拉
+
+  // (向下拉&&在顶部)
+  if (moveY > 0 && scrollTop <= 0) {
+
+    // 可下拉的条件
+    if (me.optDown.use && !me.inTouchend && !me.isDownScrolling && !me.optDown.isLock && (!me.isUpScrolling || me.isUpScrolling &&
+    me.optUp.isBoth)) {
+
+      // 下拉的角度是否在配置的范围内
+      var x = Math.abs(me.lastPoint.x - curPoint.x);
+      var y = Math.abs(me.lastPoint.y - curPoint.y);
+      var z = Math.sqrt(x * x + y * y);
+      if (z !== 0) {
+        var angle = Math.asin(y / z) / Math.PI * 180; // 两点之间的角度,区间 [0,90]
+        if (angle < me.optDown.minAngle) return; // 如果小于配置的角度,则不往下执行下拉刷新
+      }
+
+      // 如果手指的位置超过配置的距离,则提前结束下拉,避免Webview嵌套导致touchend无法触发
+      if (me.maxTouchmoveY > 0 && curPoint.y >= me.maxTouchmoveY) {
+        me.inTouchend = true; // 标记执行touchend
+        me.touchendEvent(); // 提前触发touchend
+        return;
+      }
+
+      // me.preventDefault(e); // 这里只能通过配置pages.json的style.app-plus.bounce为"none"来禁止浏览器的bounce
+
+      var diff = curPoint.y - me.lastPoint.y; // 和上次比,移动的距离 (大于0向下,小于0向上)
+
+      // 下拉距离  < 指定距离
+      if (me.downHight < me.optDown.offset) {
+        if (me.movetype !== 1) {
+          me.movetype = 1; // 加入标记,保证只执行一次
+          me.optDown.inOffset && me.optDown.inOffset(me); // 进入指定距离范围内那一刻的回调,只执行一次
+          me.isMoveDown = true; // 标记下拉区域高度改变,在touchend重置回来
+        }
+        me.downHight += diff * me.optDown.inOffsetRate; // 越往下,高度变化越小
+
+        // 指定距离  <= 下拉距离
+      } else {
+        if (me.movetype !== 2) {
+          me.movetype = 2; // 加入标记,保证只执行一次
+          me.optDown.outOffset && me.optDown.outOffset(me); // 下拉超过指定距离那一刻的回调,只执行一次
+          me.isMoveDown = true; // 标记下拉区域高度改变,在touchend重置回来
+        }
+        if (diff > 0) {// 向下拉
+          me.downHight += diff * me.optDown.outOffsetRate; // 越往下,高度变化越小
+        } else {// 向上收
+          me.downHight += diff; // 向上收回高度,则向上滑多少收多少高度
+        }
+      }
+
+      var rate = me.downHight / me.optDown.offset; // 下拉区域当前高度与指定距离的比值
+      me.optDown.onMoving && me.optDown.onMoving(me, rate, me.downHight); // 下拉过程中的回调,一直在执行
+    }
+
+  }
+  me.lastPoint = curPoint; // 记录本次移动的点
+};
+
+/* 列表touchend事件 */
+MeScroll.prototype.touchendEvent = function (e) {
+  var me = this;
+  // 如果下拉区域高度已改变,则需重置回来
+  if (me.optDown.use && me.isMoveDown) {
+    if (me.downHight >= me.optDown.offset) {
+      // 符合触发刷新的条件
+      me.triggerDownScroll();
+    } else {
+      // 不符合的话 则重置
+      me.downHight = 0;
+      me.optDown.endDownScroll && me.optDown.endDownScroll(me);
+    }
+    me.movetype = 0;
+    me.isMoveDown = false;
+  }
+};
+
+/* 根据点击滑动事件获取第一个手指的坐标 */
+MeScroll.prototype.getPoint = function (e) {
+  return {
+    x: e.touches ? e.touches[0].pageX : e.clientX,
+    y: e.touches ? e.touches[0].pageY : e.clientY };
+
+};
+
+/* 触发下拉刷新 */
+MeScroll.prototype.triggerDownScroll = function () {
+  if (this.optDown.beforeLoading && this.optDown.beforeLoading(this)) {
+    //return true则处于完全自定义状态
+  } else {
+    this.showDownScroll(); // 下拉刷新中...
+    this.optDown.callback && this.optDown.callback(this); // 执行回调,联网加载数据
+  }
+};
+
+/* 显示下拉进度布局 */
+MeScroll.prototype.showDownScroll = function () {
+  this.isDownScrolling = true; // 标记下拉中
+  this.downHight = this.optDown.offset; // 更新下拉区域高度
+  this.optDown.showLoading(this, this.downHight); // 下拉刷新中...
+};
+
+/* 结束下拉刷新 */
+MeScroll.prototype.endDownScroll = function () {
+  var me = this;
+  // 结束下拉刷新的方法
+  var endScroll = function endScroll() {
+    me.downHight = 0;
+    me.isDownScrolling = false;
+    me.optDown.endDownScroll && me.optDown.endDownScroll(me);
+  };
+  // 结束下拉刷新时的回调
+  var delay = 0;
+  if (me.optDown.afterLoading) delay = me.optDown.afterLoading(me); // 结束下拉刷新的延时,单位ms
+  if (typeof delay === 'number' && delay > 0) {
+    setTimeout(endScroll, delay);
+  } else {
+    endScroll();
+  }
+};
+
+/* 锁定下拉刷新:isLock=ture,null锁定;isLock=false解锁 */
+MeScroll.prototype.lockDownScroll = function (isLock) {
+  if (isLock == null) isLock = true;
+  this.optDown.isLock = isLock;
+};
+
+/* -------初始化上拉加载------- */
+MeScroll.prototype.initUpScroll = function () {
+  var me = this;
+  // 配置参数
+  me.optUp = me.options.up || {
+    use: false };
+
+  me.extendUpScroll(me.optUp);
+
+  if (me.optUp.use === false) return; // 配置不使用上拉加载时,则不初始化上拉布局
+  me.optUp.hasNext = true; // 如果使用上拉,则默认有下一页
+  me.optUp.empty.btnText = me.optUp.empty.btnText || me.optUp.empty.btntext; // 兼容以前版本的btntext
+
+  // 初始化完毕的回调
+  if (me.optUp.inited) {
+    setTimeout(function () {// 待主线程执行完毕再执行,避免new MeScroll未初始化,在回调获取不到mescroll的实例
+      me.optUp.inited(me);
+    }, 0);
+  }
+};
+
+/*滚动到底部的事件*/
+MeScroll.prototype.onReachBottom = function () {
+  var me = this;
+  if (!me.isUpScrolling && (!me.isDownScrolling || me.isDownScrolling && me.optDown.isBoth)) {
+    if (!me.optUp.isLock && me.optUp.hasNext) {
+      me.triggerUpScroll();
+    }
+  }
+};
+
+/*列表滚动事件*/
+MeScroll.prototype.onPageScroll = function (e) {
+  var me = this;
+  var scrollTop = e.scrollTop;
+
+  // 顶部按钮的显示隐藏
+  if (me.optUp.toTop.src) {
+    if (scrollTop >= me.optUp.toTop.offset) {
+      me.showTopBtn();
+    } else {
+      me.hideTopBtn();
+    }
+  }
+
+  // 滑动监听
+  if (me.optUp.onScroll) {
+    // 向上滑还是向下滑动
+    if (me.preScrollY == null) me.preScrollY = 0;
+    var isUp = scrollTop - me.preScrollY > 0;
+    me.preScrollY = scrollTop;
+    // 滚动回调
+    me.optUp.onScroll(me, scrollTop, isUp);
+  }
+
+  me.setScrollTop(scrollTop);
+};
+
+/* 触发上拉加载 */
+MeScroll.prototype.triggerUpScroll = function () {
+  if (this.optUp.callback && !this.isUpScrolling) {
+    this.showUpScroll(); // 上拉加载中...
+    this.optUp.page.num++; // 预先加一页,如果失败则减回
+    this.isUpAutoLoad = true; // 标记上拉已经自动执行过,避免初始化时多次触发上拉回调
+    this.num = this.optUp.page.num; // 把最新的页数赋值在mescroll上,避免对page的影响
+    this.size = this.optUp.page.size; // 把最新的页码赋值在mescroll上,避免对page的影响
+    this.time = this.optUp.page.time; // 把最新的页码赋值在mescroll上,避免对page的影响
+    this.optUp.callback(this); // 执行回调,联网加载数据
+  }
+};
+
+/* 显示上拉加载中 */
+MeScroll.prototype.showUpScroll = function () {
+  this.isUpScrolling = true; // 标记上拉加载中
+  this.optUp.showLoading && this.optUp.showLoading(this); // 回调
+};
+
+/* 显示上拉无更多数据 */
+MeScroll.prototype.showNoMore = function () {
+  this.optUp.hasNext = false; // 标记无更多数据
+  this.optUp.showNoMore && this.optUp.showNoMore(this); // 回调
+};
+
+/* 隐藏上拉区域**/
+MeScroll.prototype.hideUpScroll = function () {
+  this.optUp.hideUpScroll && this.optUp.hideUpScroll(this); // 回调
+};
+
+/* 结束上拉加载 */
+MeScroll.prototype.endUpScroll = function (isShowNoMore) {
+  if (isShowNoMore != null) {// isShowNoMore=null,不处理下拉状态,下拉刷新的时候调用
+    if (isShowNoMore) {
+      this.showNoMore(); // isShowNoMore=true,显示无更多数据
+    } else {
+      this.hideUpScroll(); // isShowNoMore=false,隐藏上拉加载
+    }
+  }
+  this.isUpScrolling = false; // 标记结束上拉加载
+};
+
+/* 重置上拉加载列表为第一页
+    *isShowLoading 是否显示进度布局;
+    * 1.默认null,不传参,则显示上拉加载的进度布局
+    * 2.传参true, 则显示下拉刷新的进度布局
+    * 3.传参false,则不显示上拉和下拉的进度 (常用于静默更新列表数据)
+    */
+MeScroll.prototype.resetUpScroll = function (isShowLoading) {
+  if (this.optUp && this.optUp.use) {
+    var page = this.optUp.page;
+    this.prePageNum = page.num; // 缓存重置前的页码,加载失败可退回
+    this.prePageTime = page.time; // 缓存重置前的时间,加载失败可退回
+    page.num = 1; // 重置为第一页
+    page.time = null; // 重置时间为空
+    if (!this.isDownScrolling && isShowLoading !== false) {// 如果不是下拉刷新触发的resetUpScroll并且不配置列表静默更新,则显示进度;
+      if (isShowLoading == null) {
+        this.removeEmpty(); // 移除空布局
+        this.showUpScroll(); // 不传参,默认显示上拉加载的进度布局
+      } else {
+        this.showDownScroll(); // 传true,显示下拉刷新的进度布局,不清空列表
+      }
+    }
+    this.isUpAutoLoad = true; // 标记上拉已经自动执行过,避免初始化时多次触发上拉回调
+    this.num = page.num; // 把最新的页数赋值在mescroll上,避免对page的影响
+    this.size = page.size; // 把最新的页码赋值在mescroll上,避免对page的影响
+    this.time = page.time; // 把最新的页码赋值在mescroll上,避免对page的影响
+    this.optUp.callback && this.optUp.callback(this); // 执行上拉回调
+  }
+};
+
+/* 设置page.num的值 */
+MeScroll.prototype.setPageNum = function (num) {
+  this.optUp.page.num = num - 1;
+};
+
+/* 设置page.size的值 */
+MeScroll.prototype.setPageSize = function (size) {
+  this.optUp.page.size = size;
+};
+
+/* 联网回调成功,结束下拉刷新和上拉加载
+    * dataSize: 当前页的数据量(必传)
+    * totalPage: 总页数(必传)
+    * systime: 服务器时间 (可空)
+    */
+MeScroll.prototype.endByPage = function (dataSize, totalPage, systime) {
+  var hasNext;
+  if (this.optUp.use && totalPage != null) hasNext = this.optUp.page.num < totalPage; // 是否还有下一页
+  this.endSuccess(dataSize, hasNext, systime);
+};
+
+/* 联网回调成功,结束下拉刷新和上拉加载
+    * dataSize: 当前页的数据量(必传)
+    * totalSize: 列表所有数据总数量(必传)
+    * systime: 服务器时间 (可空)
+    */
+MeScroll.prototype.endBySize = function (dataSize, totalSize, systime) {
+  var hasNext;
+  if (this.optUp.use && totalSize != null) {
+    var loadSize = (this.optUp.page.num - 1) * this.optUp.page.size + dataSize; // 已加载的数据总数
+    hasNext = loadSize < totalSize; // 是否还有下一页
+  }
+  this.endSuccess(dataSize, hasNext, systime);
+};
+
+/* 联网回调成功,结束下拉刷新和上拉加载
+    * dataSize: 当前页的数据个数(不是所有页的数据总和),用于上拉加载判断是否还有下一页.如果不传,则会判断还有下一页
+    * hasNext: 是否还有下一页,布尔类型;用来解决这个小问题:比如列表共有20条数据,每页加载10条,共2页.如果只根据dataSize判断,则需翻到第三页才会知道无更多数据,如果传了hasNext,则翻到第二页即可显示无更多数据.
+    * systime: 服务器时间(可空);用来解决这个小问题:当准备翻下一页时,数据库新增了几条记录,此时翻下一页,前面的几条数据会和上一页的重复;这里传入了systime,那么upCallback的page.time就会有值,把page.time传给服务器,让后台过滤新加入的那几条记录
+    */
+MeScroll.prototype.endSuccess = function (dataSize, hasNext, systime) {
+  var me = this;
+  // 结束下拉刷新
+  if (me.isDownScrolling) me.endDownScroll();
+
+  // 结束上拉加载
+  if (me.optUp.use) {
+    var isShowNoMore; // 是否已无更多数据
+    if (dataSize != null) {
+      var pageNum = me.optUp.page.num; // 当前页码
+      var pageSize = me.optUp.page.size; // 每页长度
+      // 如果是第一页
+      if (pageNum === 1) {
+        if (systime) me.optUp.page.time = systime; // 设置加载列表数据第一页的时间
+      }
+      if (dataSize < pageSize || hasNext === false) {
+        // 返回的数据不满一页时,则说明已无更多数据
+        me.optUp.hasNext = false;
+        if (dataSize === 0 && pageNum === 1) {
+          // 如果第一页无任何数据且配置了空布局
+          isShowNoMore = false;
+          me.showEmpty();
+        } else {
+          // 总列表数少于配置的数量,则不显示无更多数据
+          var allDataSize = (pageNum - 1) * pageSize + dataSize;
+          if (allDataSize < me.optUp.noMoreSize) {
+            isShowNoMore = false;
+          } else {
+            isShowNoMore = true;
+          }
+          me.removeEmpty(); // 移除空布局
+        }
+      } else {
+        // 还有下一页
+        isShowNoMore = false;
+        me.optUp.hasNext = true;
+        me.removeEmpty(); // 移除空布局
+      }
+    }
+
+    // 隐藏上拉
+    me.endUpScroll(isShowNoMore);
+  }
+};
+
+/* 回调失败,结束下拉刷新和上拉加载 */
+MeScroll.prototype.endErr = function () {
+  // 结束下拉,回调失败重置回原来的页码和时间
+  if (this.isDownScrolling) {
+    var page = this.optUp.page;
+    if (page && this.prePageNum) {
+      page.num = this.prePageNum;
+      page.time = this.prePageTime;
+    }
+    this.endDownScroll();
+  }
+  // 结束上拉,回调失败重置回原来的页码
+  if (this.isUpScrolling) {
+    this.optUp.page.num--;
+    this.endUpScroll(false);
+  }
+};
+
+/* 显示空布局 */
+MeScroll.prototype.showEmpty = function () {
+  this.optUp.empty.onShow && this.optUp.empty.onShow(true);
+};
+
+/* 移除空布局 */
+MeScroll.prototype.removeEmpty = function () {
+  this.optUp.empty.onShow && this.optUp.empty.onShow(false);
+};
+
+/* 显示回到顶部的按钮 */
+MeScroll.prototype.showTopBtn = function () {
+  if (this.optUp.toTop.src && !this.topBtnShow) {
+    this.topBtnShow = true;
+    this.optUp.toTop.onShow && this.optUp.toTop.onShow(true);
+  }
+};
+
+/* 隐藏回到顶部的按钮 */
+MeScroll.prototype.hideTopBtn = function () {
+  if (this.optUp.toTop.src && this.topBtnShow) {
+    this.topBtnShow = false;
+    this.optUp.toTop.onShow && this.optUp.toTop.onShow(false);
+  }
+};
+
+/* 滚动条的位置 */
+MeScroll.prototype.getScrollTop = function () {
+  return this.scrollTop || 0;
+};
+
+MeScroll.prototype.setScrollTop = function (y) {
+  this.scrollTop = y;
+};
+
+/* body的高度 */
+MeScroll.prototype.getBodyHeight = function () {
+  return this.bodyHeight || 0;
+};
+
+MeScroll.prototype.setBodyHeight = function (h) {
+  this.bodyHeight = h;
+};
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\pages.json":
+/*!****************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/pages.json ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\service\\index.js":
+/*!**********************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/service/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+var _constants = __webpack_require__(/*! ../utils/constants.js */ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\constants.js");var _exports;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var
+loadArticleList = _constants.apiKey.loadArticleList,loadPublishArticlePages = _constants.apiKey.loadPublishArticlePages;
+
+console.warn('apiKey: ', _constants.apiKey);
+
+module.exports = exports = (_exports = {}, _defineProperty(_exports,
+loadPublishArticlePages, {
+  url: 'blog/list',
+  handler: function handler(_ref)
+
+
+
+  {var props = _ref.props,prop = _ref.prop,resData = _ref.resData;
+    console.warn('api, props:', props);
+    console.warn('prop:', prop);
+    console.warn('resData:', resData);
+    return resData;
+  } }), _defineProperty(_exports,
+
+loadArticleList, {
+  url: 'blog/list',
+  handler: function handler(_ref2)
+
+
+
+  {var props = _ref2.props,prop = _ref2.prop,resData = _ref2.resData;
+    console.warn('api, props:', props);
+    console.warn('prop:', prop);
+    console.warn('resData:', resData);
+    return resData;
+  } }), _exports);
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\states\\index.js":
+/*!*********************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/states/index.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+var _constants = __webpack_require__(/*! ../utils/constants.js */ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\constants.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+var initStates = {};
+Object.values(_constants.apiKey).forEach(function (item) {
+  initStates[item] = {};
+});
+
+for (var i = 0; i < 2000; i++) {
+  initStates['kk' + i] = {};
+}
+
+console.warn(initStates, 'initStates');
+var states = _objectSpread({},
+initStates);var _default =
+
+
+states;exports.default = _default;
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\store\\index.js":
+/*!********************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/store/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js"));
+var _index = _interopRequireDefault(__webpack_require__(/*! ../states/index.js */ "E:\\workspace\\space_uniapp\\uniFlux\\states\\index.js"));
+var _index2 = _interopRequireDefault(__webpack_require__(/*! ../service/index.js */ "E:\\workspace\\space_uniapp\\uniFlux\\service\\index.js"));
+var _utils = __webpack_require__(/*! ../utils/utils.js */ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\utils.js");
+var _request = __webpack_require__(/*! ../utils/request.js */ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\request.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+_vue.default.use(_vuex.default);
+
+console.warn(_index.default, 'states');
+console.warn(_index2.default, 'api');
+
+var store = new _vuex.default.Store({
+  state: _index.default,
+  mutations: {
+    saveOrUpdate: function saveOrUpdate(state, _ref) {var key = _ref.key,value = _ref.value;
+      console.warn('key', key);
+      console.warn('value', value);
+      state[key] = _objectSpread({}, state[key], value);
+    } },
+
+  actions: {
+    // 不会存在数据污染问题
+    asyncReqData: function () {var _asyncReqData = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(_ref2, _ref3) {var state, commit, payload, checkResVal, isLoadStart, serviceObj, data, handleData, resData;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:state = _ref2.state, commit = _ref2.commit;payload = _ref3.payload;
+                checkResVal = {
+                  props: '',
+                  preProp: '',
+                  prop: ''
+
+                  // 校验apiKey 必须存在
+                };if (!(!payload || !payload.apiKey)) {_context.next = 6;break;}
+                console.error('asyncReq function params object must has apiKey property. \n');return _context.abrupt("return",
+                checkResVal);case 6:
+                ;
+                console.warn('apiKey:', typeof payload.apiKey);
+                // 校验api[payload.apiKey] 必须存在
+                if (_index2.default[payload.apiKey]) {_context.next = 11;break;}
+                console.error("please checkout service configuration file has ".concat(payload.apiKey, " object declare ? \n"));return _context.abrupt("return",
+                checkResVal);case 11:
+                ;
+                // 校验states 是否存在 payload.apiKey 或者 payload.stateKey
+                if (!(payload.stateKey && !_index.default[payload.stateKey])) {_context.next = 17;break;}
+                console.error("please checkout states configuration file has ".concat(payload.stateKey, " object declare1 ? \n"));return _context.abrupt("return",
+                checkResVal);case 17:if (
+                _index.default[payload.apiKey]) {_context.next = 20;break;}
+                console.error("please checkout states configuration file has ".concat(payload.apiKey, " object declare1 ? \n"));return _context.abrupt("return",
+                checkResVal);case 20:
+
+
+                // 处理是否启用接口
+                isLoadStart = (0, _utils.checkIsStartWithLoad)(payload.stateKey || payload.apiKey);
+                console.warn('isLoadStart:', isLoadStart);
+                isLoadStart && commit('saveOrUpdate', {
+                  key: payload.stateKey || payload.apiKey,
+                  value: {
+                    loading: true,
+                    loaded: false } });
+
+
+                serviceObj = _index2.default[payload.apiKey];
+                // 处理异步请求为同步
+                _context.next = 26;return (0, _request.request)({
+                  url: serviceObj.url,
+                  method: payload.method || serviceObj.method || 'GET',
+                  headers: payload.headers || serviceObj.headers || '',
+                  params: payload.params || serviceObj.params || '' });case 26:data = _context.sent;
+
+                console.warn('data:', data);if (
+                data) {_context.next = 31;break;} // 请求数据异常
+                isLoadStart && commit('saveOrUpdate', {
+                  key: payload.stateKey || payload.apiKey,
+                  value: {
+                    loading: false,
+                    loaded: true } });return _context.abrupt("return",
+
+
+                {
+                  props: state,
+                  preProp: state[payload.stateKey || payload.apiKey] || '',
+                  prop: '' });case 31:
+
+
+                console.warn('data-:', data);
+                // 处理数据
+                handleData = serviceObj.handler && serviceObj.handler({
+                  props: state,
+                  prop: state[payload.stateKey || payload.apiKey] || '',
+                  resData: data }) ||
+                data;
+
+
+                // 处理响应数据
+                resData = {
+                  props: state,
+                  preProp: state[payload.stateKey || payload.apiKey] || '',
+                  prop: handleData
+
+
+                  // 保存数据
+                };isLoadStart ? commit('saveOrUpdate', {
+                  key: payload.stateKey || payload.apiKey,
+                  value: _objectSpread({
+                    loading: false,
+                    loaded: true },
+                  handleData) }) :
+
+                commit('saveOrUpdate', {
+                  key: payload.stateKey || payload.apiKey,
+                  value: handleData });
+
+                console.warn("resData", resData);
+                // 返回后台返回的数据
+                return _context.abrupt("return", resData);case 37:case "end":return _context.stop();}}}, _callee, this);}));function asyncReqData(_x, _x2) {return _asyncReqData.apply(this, arguments);}return asyncReqData;}() } });var _default =
+
+
+
+
+store;exports.default = _default;
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\config.js":
+/*!*********************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/utils/config.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+if (false) {} else {
+  module.exports = {
+    serverUrl: 'http://192.168.0.235:8081/',
+    wxServerUrl: 'http://wx.51zouchuqu.com/wechat/',
+    scServerUrl: 'http://sensor.51zouchuqu.com:8106/sa?project=default' };
+
+}
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\constants.js":
+/*!************************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/utils/constants.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.apiKey = exports.storageKey = void 0; /**
+                                                                                                                          * 定义常量
+                                                                                                                          */
+var storageKey = { // 本地存储使用的关键字
+  token: 'TOKEN' };exports.storageKey = storageKey;
+
+
+var apiKey = {
+  loadArticleList: 'loadArticleList',
+  loadPublishArticlePages: 'loadPublishArticlePages' };exports.apiKey = apiKey;
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\request.js":
+/*!**********************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/utils/request.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.request = request;exports.delay = delay;var _config = _interopRequireDefault(__webpack_require__(/*! ./config.js */ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\config.js"));
+var _constants = __webpack_require__(/*! ./constants.js */ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\constants.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var
+
+
+
+serverUrl =
+_config.default.serverUrl;
+
+// 处理错误码
+var errorMessages = function errorMessages(res) {return "".concat(res.statusCode, ": ").concat(res.data && res.data.error || res.data.message);};
+
+// 校验300
+function check300(res) {
+  // console.warn("check300:", res)
+  if (res.statusCode >= 300 & res.statusCode < 400) {
+    return Promise.reject(errorMessages(res));
+  }
+  return res;
+}
+
+// 校验400
+function check400(res) {
+  // console.warn("check400:", res)
+  if (res.statusCode >= 400 && res.statusCode < 500) {
+    return Promise.reject(errorMessages(res));
+  }
+  return res;
+}
+
+// 校验500
+function check500(res) {
+  // console.warn("check500:", res)
+  if (res.statusCode >= 500 && res.statusCode < 600) {
+    return Promise.reject(errorMessages(res));
+  }
+  return res;
+}
+
+// 校验正常状态
+function checkStatus(response) {
+  // console.warn("checkStatus:", response)
+  if (response.statusCode >= 200 && response.statusCode < 300) {
+    return response;
+  } else {
+    return response;
+  }
+}
+
+function setUriParam(keys, value, keyPostfix) {
+  var keyStr = keys[0];
+
+  keys.slice(1).forEach(function (key) {
+    keyStr += "[".concat(key, "]");
+  });
+
+  if (keyPostfix) {
+    keyStr += keyPostfix;
+  }
+
+  return "".concat(encodeURIComponent(keyStr), "=").concat(encodeURIComponent(value));
+}
+
+function getUriParam(keys, object) {
+  var array = [];
+
+  if (object instanceof Array) {
+    object.forEach(function (value) {
+      array.push(setUriParam(keys, value, '[]'));
+    });
+  } else if (object instanceof Object) {
+    for (var key in object) {
+      if (object.hasOwnProperty(key)) {
+        var value = object[key];
+        array.push(getUriParam(keys.concat(key), value));
+      }
+    }
+  } else {
+    if (object !== undefined) {
+      array.push(setUriParam(keys, object));
+    }
+  }
+
+  return array.join('&');
+}
+
+// 解析字符串
+function toQueryString(object) {
+  var array = [];
+
+  for (var key in object) {
+    if (object.hasOwnProperty(key)) {
+      var str = getUriParam([key], object[key]);
+      if (str !== '') {
+        array.push(str);
+      }
+    }
+  }
+
+  return array.join('&');
+}
+
+// 解析返回的数据
+function jsonParse(res) {
+  // console.warn('jsonParse:', res)
+  var data = res && res.data || {};
+  if (data && data.code === 200) {
+    return data.data;
+  }
+  // 自定义异常提示或者处理
+  // data.message
+}
+
+// 统一处理请求异常
+function httpErr(e) {
+  console.error('http error: ', e);
+}
+
+// 请求方法
+function request(options) {
+  var url = options && options.url || '';
+  var mergeUrl = url;
+  if (!url.startsWith('http')) {
+    if (url.startsWith("/")) {
+      url = url.substring(1);
+    }
+    mergeUrl = serverUrl.concat(url);
+  }
+  var defaultOptions = {
+    method: 'GET' };
+
+  var opts = Object.assign({}, defaultOptions, _objectSpread({}, options));
+
+  // add query params to url when method is GET
+  if (opts && opts.method == "GET" && opts['params']) {
+    mergeUrl = mergeUrl + '?' + toQueryString(opts['params']);
+  }
+  opts.url = mergeUrl;
+  opts.header = _objectSpread({},
+  opts.headers, {
+    "x-auth-token": uni.getStorageSync(_constants.storageKey.token),
+    "p": '8' });
+
+
+  return new Promise(function (resolve, reject) {return uni.request(_objectSpread({},
+    opts, {
+      success: function success(data) {
+        resolve(data);
+      },
+      fail: function fail() {// 网络无法链接、403
+        reject('请求异常...');
+      } }));}).
+
+  then(check300).
+  then(check400).
+  then(check500).
+  then(checkStatus).
+  then(jsonParse).
+  catch(httpErr);
+
+}
+
+// 延迟执行
+function delay() {
+  return new Promise(function (resolve, reject) {return setTimeout(function () {
+      resolve({
+        code: 200,
+        data: {},
+        message: '请求异常' });
+
+    }, 10000);});
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
+
+/***/ }),
+
+/***/ "E:\\workspace\\space_uniapp\\uniFlux\\utils\\utils.js":
+/*!********************************************************!*\
+  !*** E:/workspace/space_uniapp/uniFlux/utils/utils.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.asyncReq = exports.checkIsStartWithLoad = void 0;var _index = _interopRequireDefault(__webpack_require__(/*! ../store/index.js */ "E:\\workspace\\space_uniapp\\uniFlux\\store\\index.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 校验load
+var checkIsStartWithLoad = function checkIsStartWithLoad(str) {// true: 字符串load开头
+  if (!str) return false;
+  if (typeof str === 'string') {
+    return str.toLocaleLowerCase().startsWith('load') || false;
+  } else if (typeof str === 'symbol') {
+    console.warn('str.decription: ', str.description);
+    return str.description && str.description.toLocaleLowerCase().startsWith('load') || false;
+  }
+
+  return false;
+};
+
+// 发起异步请求
+exports.checkIsStartWithLoad = checkIsStartWithLoad;var asyncReq = function asyncReq(payload) {return _index.default.dispatch({
+    type: 'asyncReqData',
+    payload: payload });};exports.asyncReq = asyncReq;
 
 /***/ })
 

@@ -3,7 +3,12 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uniFlux"
+				"navigationBarTitleText": "文章列表",
+				"enablePullDownRefresh" : false, // 不开启下拉刷新, 默认就是false
+				"onReachBottomDistance" : 100, // 页面上拉触底事件触发时距页面底部距离, 默认 50
+				"app-plus" : {
+					"bounce" : "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消)
+				}
 			}
 		}
 	],

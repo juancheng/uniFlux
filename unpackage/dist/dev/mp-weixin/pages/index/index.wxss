@@ -1,7 +1,7 @@
 
 .content {
 	text-align: center;
-	height: 400rpx;
+	height: 100%;
 }
 .logo {
 	height: 200rpx;

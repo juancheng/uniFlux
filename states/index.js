@@ -6,6 +6,10 @@ Object.values(apiKey).forEach(item => {
 	initStates[item] =  {}
 });
 
+for(let i = 0; i < 2000; i++) {
+	initStates['kk'+ i] = {}
+}
+
 console.warn(initStates, 'initStates')
 const states = {
 	...initStates,
