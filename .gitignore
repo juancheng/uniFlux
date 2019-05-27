@@ -55,5 +55,5 @@ npm-debug.log
 yarn-error.log
 
 # project
-unpackage
-dist
+unpackage/
+dist/

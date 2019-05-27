@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "uniFlux",
-  "enablePullDownRefresh": false,
-  "onReachBottomDistance": 100,
-  "usingComponents": {
-    "mescroll-uni": "/node-modules/mescroll-uni/mescroll-uni"
-  }
-}

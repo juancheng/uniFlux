@@ -1,1 +1,0 @@
-<view class="content" bind:__l="__l"><view><text class="title">{{articlePages&&articlePages.endRow}}</text><button disabled="{{articlePages&&articlePages.loading||false}}" type="primary" loading="{{articlePages&&articlePages.loading||false}}" data-event-opts="{{[['tap',[['asynBtn',['$event']]]]]}}" bindtap="__e">测试异步</button></view></view>
